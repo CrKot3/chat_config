@@ -18,7 +18,7 @@ parameters:
     description: Id of the internal network
 
 resources:
-  fedotov_instance_CF:
+  chalkov_instance:
     type: OS::Nova::Server
     properties:
       key_name: { get_param: key_name }
@@ -27,7 +27,7 @@ resources:
       networks:
         - port: { get_resource: server1_port }
 
-  fedotov_instance_CF_db:
+  chalkov_instance_DB:
     type: OS::Nova::Server
     properties:
       key_name: { get_param: key_name }
